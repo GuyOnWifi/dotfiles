@@ -5,15 +5,25 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+# ZSH PLUGINS 
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+### 
+
+# KEYBOARD SHORTCUTS & ALASES
+bindkey              '^I' menu-select
+bindkey "$terminfo[kcbt]" menu-select
+
+bindkey -M menuselect              '^I'         menu-complete
+bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
 
 alias ls='eza --icons'
+compdef eza=ls
 alias q='qs -c ii'
 
-source <(fzf --zsh)
+##
 
-eval "$(starship init zsh)"
+## ENV 
 export PATH="$HOME/.cargo/bin:$PATH"
 
 source /usr/share/nvm/init-nvm.sh
@@ -21,5 +31,9 @@ source /usr/share/nvm/init-nvm.sh
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/guyonwifi/.lmstudio/bin"
 # End of LM Studio CLI section
+##
 
+# More plugins
+source <(fzf --zsh)
+eval "$(starship init zsh)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
