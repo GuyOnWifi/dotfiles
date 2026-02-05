@@ -1,0 +1,6 @@
+# uv
+export PATH="/home/guyonwifi/.local/bin:$PATH"
+
+# editor 
+
+export EDITOR="/bin/nvim"
