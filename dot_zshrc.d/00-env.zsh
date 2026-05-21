@@ -1,0 +1,7 @@
+# History
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Emacs-style line editing
+bindkey -e

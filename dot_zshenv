@@ -1,6 +1,4 @@
-# uv
-export PATH="/home/guyonwifi/.local/bin:$PATH"
-
-# editor 
+# PATH additions that non-interactive shells (scripts, git hooks, Makefiles) also need
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 export EDITOR="/bin/nvim"
