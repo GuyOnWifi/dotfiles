@@ -1,2 +1,1 @@
-eval "$(pay-respects zsh --alias)"        # `f`
-eval "$(pay-respects zsh --alias fuck)"   # `fuck` (nostalgia)
+eval "$(pay-respects zsh --alias fuck --nocnf)"
