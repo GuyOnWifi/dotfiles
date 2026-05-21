@@ -1,0 +1,10 @@
+# External git repos chezmoi fetches into $HOME on `chezmoi apply`.
+# These don't live in the dotfiles git history — chezmoi clones them fresh
+# on each machine and refreshes on the schedule below.
+
+[".zsh/fzf-tab"]
+    type = "git-repo"
+    url = "https://github.com/Aloxaf/fzf-tab.git"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]
+    pull.args = ["--ff-only"]
