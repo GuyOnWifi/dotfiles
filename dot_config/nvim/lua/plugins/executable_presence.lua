@@ -1,6 +1,7 @@
 return {
   {
     "andweeb/presence.nvim",
+    event = "VeryLazy",
     opts = {
       -- Only show editing/reading status, no filenames or repo info
       editing_text        = "Editing...",
